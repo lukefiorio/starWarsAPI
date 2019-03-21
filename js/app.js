@@ -2,6 +2,7 @@ console.log('hello world');
 
 var randChar = document.createElement('button');
 randChar.innerHTML = 'Get a random character!';
+randChar.id = 'randButton';
 profile.appendChild(randChar);
 
 randChar.addEventListener('click',getData);
@@ -30,8 +31,12 @@ profile.appendChild(hairElem);
 
 function showData(data) {
 
-    nameElem.id = 'character';
-    nameElem.innerHTML = 'name: '+data.name;
+    nameElem.id = 'name';
+    nameElem.className = 'charAttr';
+    heightElem.className = 'charAttr';
+    massElem.className = 'charAttr';
+    hairElem.className = 'charAttr';
+    nameElem.innerHTML = data.name;
     heightElem.innerHTML = 'height(cm): '+data.height;
     massElem.innerHTML = 'mass(kg): '+data.mass;
     hairElem.innerHTML = 'hair color: '+data.hair_color;
